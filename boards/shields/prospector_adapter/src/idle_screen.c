@@ -3,9 +3,10 @@
  * Shows a centered logo image when the keyboard is idle.
  */
 
+#include <lvgl.h>
 #include "idle_screen.h"
 
-LV_IMG_DECLARE(logo_dongle);
+extern const lv_img_dsc_t logo_dongle;
 
 lv_obj_t *create_idle_screen(void) {
     lv_obj_t *screen = lv_obj_create(NULL);
