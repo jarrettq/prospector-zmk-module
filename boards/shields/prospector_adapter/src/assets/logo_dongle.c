@@ -35,10 +35,10 @@
 /* Image data: palette (8 bytes) + pixel data (480 bytes) = 488 bytes */
 static const uint8_t logo_dongle_map[488] = {
     /* Palette (BGRA format, 4 bytes each) */
-    0x00, 0x00, 0x00, 0xff, /* Index 0: black (background) */
-    0xff, 0xff, 0xff, 0xff, /* Index 1: white (foreground) */
+    0xff, 0xff, 0xff, 0xff, /* Index 0: white (zero data = visible white) */
+    0x00, 0x00, 0x00, 0xff, /* Index 1: black */
     /* Pixel data: 8 bytes per row × 60 rows = 480 bytes */
-    /* All zero = blank (all black). Replace with your logo data. */
+    /* All zero-initialized = index 0 = solid white placeholder square */
     /* ---- REPLACE FROM HERE WITH YOUR LOGO DATA ---- */
 };
 
